@@ -15,14 +15,19 @@ const VideosList = () => (
   </Container>
 )
 
+const Video = styled.section`
+  
+`
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
+  
+  & ${Video} {
+    flex: 1 1 300px;
+    margin: 0 5px 5px;
+  }
 `
-const Video = styled.section`
-  flex: 1 1 300px;
-  margin: 0 5px 5px;
-`
+
 const VideoThumb = styled.div`
   align-items: center;
   border: 1px solid #999;
