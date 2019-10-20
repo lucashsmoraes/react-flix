@@ -15,9 +15,9 @@ const App = () => (
     <Main>
       <VideosList>
         {Array.from({length: 10}).map((item, index) => (
-          <div key={index}>
-            video
-          </div>
+          <Video key={index}>
+            <h2>Título do Vídeo</h2>
+          </Video>
         ))}
       </VideosList>
     </Main>
@@ -47,6 +47,10 @@ const Main = styled.main`
 `
 const VideosList = styled.div`
   display: flex;
+  flex-wrap: wrap;
+`
+const Video = styled.section`
+  
 `
 const Footer = styled.footer`
   height: ${footerHeight};
