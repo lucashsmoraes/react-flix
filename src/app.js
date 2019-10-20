@@ -16,6 +16,7 @@ const App = () => (
       <VideosList>
         {Array.from({length: 10}).map((item, index) => (
           <Video key={index}>
+            <VideoThumb />
             <h2>Título do Vídeo</h2>
           </Video>
         ))}
@@ -51,6 +52,10 @@ const VideosList = styled.div`
 `
 const Video = styled.section`
   
+`
+const VideoThumb = styled.div`
+  border: 1px solid #999;
+  height: 150px;
 `
 const Footer = styled.footer`
   height: ${footerHeight};
