@@ -19,7 +19,7 @@ const App = () => (
         {Array.from({length: 10}).map((item, index) => (
           <Video key={index}>
             <VideoThumb >
-              <Play />
+              <PlayStyled />
             </VideoThumb>
             <VideoTitle>Título do Vídeo</VideoTitle>
           </Video>
@@ -64,6 +64,11 @@ const VideoThumb = styled.div`
   display: flex;
   height: 150px;
   justify-content: center;
+`
+const PlayStyled = styled(Play)`
+  background: #999;
+  height: 50px;
+  width: 50px;
 `
 const VideoTitle = styled.h2`
   font-size: 18px;
