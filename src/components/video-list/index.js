@@ -15,8 +15,14 @@ const VideosList = () => (
   </Container>
 )
 
+const PlayStyled = styled(Play)`
+  fill: #999;
+  height: 50px;
+  width: 50px;
+`
 const Video = styled.section`
-  
+  &:hover ${PlayStyled} {
+  transform: scale(1.5)
 `
 const Container = styled.div`
   display: flex;
@@ -34,11 +40,6 @@ const VideoThumb = styled.div`
   display: flex;
   height: 150px;
   justify-content: center;
-`
-const PlayStyled = styled(Play)`
-  fill: #999;
-  height: 50px;
-  width: 50px;
 `
 const VideoTitle = styled.h2`
   font-size: 18px;
