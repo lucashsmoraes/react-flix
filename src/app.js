@@ -3,6 +3,8 @@
 import React from 'react'
 import styled, {injectGlobal} from 'styled-components'
 
+import Play from './components/play'
+
 import 'normalize.css'
 import 'milligram'
 
@@ -16,7 +18,9 @@ const App = () => (
       <VideosList>
         {Array.from({length: 10}).map((item, index) => (
           <Video key={index}>
-            <VideoThumb />
+            <VideoThumb >
+              <Play />
+            </VideoThumb>
             <VideoTitle>Título do Vídeo</VideoTitle>
           </Video>
         ))}
