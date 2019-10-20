@@ -18,6 +18,7 @@ const VideosList = () => (
 const PlayStyled = styled(Play)`
   fill: #999;
   height: 50px;
+  transition: all .15s ease-in-out;
   width: 50px;
 `
 const Video = styled.section`
@@ -27,6 +28,7 @@ const Video = styled.section`
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
   
   & ${Video} {
     flex: 1 1 300px;
