@@ -1,43 +1,34 @@
 'use strict'
 
 import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 
 import 'normalize.css'
 import 'milligram'
 
-class App extends PureComponent {
-  constructor () {
-    super()
-    this.state = {
-      title: '...',
-      Component: 'div'
-    }
-  }
+const App = () => (
+  <div>
+    <Header>
+      <h1>Reactflix</h1>
+    </Header>
 
-  getTitle () {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve('My app with async / await!')
-      }, 2000)
-    })
-  }
+    <main>
+      Conteúdo
+    </main>
 
-  async componentDidMount () {
-    const title = await import('components/title')
+    <Footer>
+      &copy; 2018
+    </Footer>
+  </div>
+)
 
-    this.setState({
-      title: await this.getTitle(),
-      Component: title.default
-    })
-  }
-
-  render () {
-    return (
-      <div>
-        <this.state.Component>{this.state.title}</this.state.Component>
-      </div>
-    )
-  }
-}
+const Header = styled.header`
+  height: 60px;
+  background: #333;
+`
+const Footer = styled.footer`
+  height: 30px;
+  background: #333;
+`
 
 export default App
