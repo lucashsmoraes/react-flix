@@ -59,8 +59,11 @@ const Video = styled.section`
   margin: 0 5px 5px;
 `
 const VideoThumb = styled.div`
+  align-items: center;
   border: 1px solid #999;
+  display: flex;
   height: 150px;
+  justify-content: center;
 `
 const VideoTitle = styled.h2`
   font-size: 18px;
