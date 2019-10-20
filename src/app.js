@@ -66,7 +66,7 @@ const VideoThumb = styled.div`
   justify-content: center;
 `
 const PlayStyled = styled(Play)`
-  background: #999;
+  fill: #999;
   height: 50px;
   width: 50px;
 `
